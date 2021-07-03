@@ -12,22 +12,22 @@ class CardDeck
     generate_deck
     shuffle_the_deck
   end
-end
 
-def generate_deck
-  @card_deck = []
-  CardDeck::CARDSUIT.each do |suit|
-    CardDeck::CARDVALUE.each do |val|
-      @card_deck << Card.new(val, suit)
+  def generate_deck
+    @card_deck = []
+    CardDeck::CARDSUIT.each do |suit|
+      CardDeck::CARDVALUE.each do |val|
+        @card_deck << Card.new(val, suit)
+      end
     end
   end
-end
 
-def shuffle_the_deck
-  100.times do
-    card_deck << card_deck.sample
-    card_deck.reverse!
-    card_deck.uniq!
+  def shuffle_the_deck
+    100.times do
+      card_deck << card_deck.sample
+      card_deck.reverse!
+      card_deck.uniq!
+    end
   end
 
   def hand_over

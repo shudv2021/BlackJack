@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Hand
   attr_accessor :cards_on_hand
 

@@ -1,0 +1,17 @@
+#
+Metrics/AbcSize:
+  IgnoredMethods:
+  - 'show_player'
+  - 'check_points'
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 20
+#Metrics/ClassLength:
+#Max: 150
+#Metrics/CyclomaticComplexity:
+#Max: 40
+#Metrics/MethodLength:
+#Max: 20
+#Metrics/BlockLength:
+#Max: 20
