@@ -5,9 +5,6 @@ require_relative 'card'
 class CardDeck
   attr_accessor :card_deck
 
-  CARDSUIT = ["\u2660", "\u2663", "\u2665", "\u2666"].freeze
-  CARDVALUE = %w[2 3 4 5 6 7 8 9 10 V D K T].freeze
-
   def initialize
     generate_deck
     shuffle_the_deck
@@ -15,8 +12,8 @@ class CardDeck
 
   def generate_deck
     @card_deck = []
-    CardDeck::CARDSUIT.each do |suit|
-      CardDeck::CARDVALUE.each do |val|
+    Card::CARDSUIT.each do |suit|
+      Card::CARDVALUE.each do |val|
         @card_deck << Card.new(val, suit)
       end
     end
